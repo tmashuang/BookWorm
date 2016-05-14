@@ -1,5 +1,6 @@
 {
   "name": "BookWorm",
+  "manifest_version": 2,
   "version": "0.0.1",
   "description": "Eats bookmarks",
   "browser_action": {
@@ -10,5 +11,5 @@
       "bookmarks",
       "tabs",
       "activeTab"
-    ],
+    ]
 }
