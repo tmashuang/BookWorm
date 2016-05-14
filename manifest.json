@@ -1,0 +1,14 @@
+{
+  "name": "BookWorm",
+  "version": "0.0.1",
+  "description": "Eats bookmarks",
+  "browser_action": {
+    "default_icon": "bookwormlogo.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+      "bookmarks",
+      "tabs",
+      "activeTab"
+    ],
+}
