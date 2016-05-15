@@ -10,6 +10,16 @@
   "permissions": [
       "bookmarks",
       "tabs",
-      "activeTab"
-    ]
+      "activeTab",
+      "alarms"
+    ],
+  "content_scripts":  [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "jquery-2.2.3.min.js", "bookWorm.js"]
+    }
+  ],
+  "background" : {
+    "page": "background.html"
+  }
 }
