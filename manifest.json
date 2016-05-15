@@ -1,5 +1,6 @@
 {
   "name": "BookWorm",
+  "manifest_version": 2,
   "version": "0.0.1",
   "description": "Eats bookmarks",
   "browser_action": {
@@ -9,6 +10,16 @@
   "permissions": [
       "bookmarks",
       "tabs",
-      "activeTab"
+      "activeTab",
+      "alarms"
     ],
+  "content_scripts":  [
+    {
+      "matches": [ "<all_urls>" ],
+      "js": [ "jquery-2.2.3.min.js", "bookWorm.js"]
+    }
+  ],
+  "background" : {
+    "page": "background.html"
+  }
 }
