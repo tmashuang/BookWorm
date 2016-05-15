@@ -1,9 +1,11 @@
 $(document).ready(function() {
-  onCreatedChrome()
+  onCreatedChrome();
 });
 
 function onCreatedChrome() {
   chrome.tabs.onCreated.addListener(function(tab) {
-    alert("hello");
+    chrome.bookmarks.getChildren("1", (bar) => {
+      chrome.bookmarks.remove(bar[bar.length - 1].id);
+      });
   });
 }
